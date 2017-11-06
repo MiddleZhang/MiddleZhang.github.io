@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-<title>三宝唐山麻将</title>
-<link rel="icon" href="images/download/icon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="images/download/icon.ico" type="image/x-icon" />
+<title></title>
+<!--<link rel="icon" href="images/download/icon.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="images/download/icon.ico" type="image/x-icon" />-->
 <style type="text/css">
 * {
 	background-repeat: no-repeat;
@@ -59,13 +59,13 @@ body {
 	color: white;
 	
 }
-.icon {
-	width: 45%;
-	height: 34%;
-	position: relative;
-	top: 53%;
-	background-size: 100% auto;
-}
+/*.icon {*/
+	/*width: 45%;*/
+	/*height: 34%;*/
+	/*position: relative;*/
+	/*top: 53%;*/
+	/*background-size: 100% auto;*/
+/*}*/
 
 .popWindow {
 	background-color: rgba(0, 0, 0, 0.6);
@@ -84,7 +84,7 @@ body {
 	<div id="page1">
 		<div class="button">
 			<a class="bt_common" onclick="showOver()">
-				<img alt="三宝唐山麻将" src="./images/download/button.png" height="60%" width="50%">
+				<img alt="" src="./images/download/button.png" height="60%" width="50%">
 			</a>
 		</div>
 		<div id="popWindow" class="popWindow" onclick="hideOver()" style="cursor: pointer; display:none;">
@@ -93,7 +93,7 @@ body {
 	</div>
 </body>
 <script type="text/javascript">
-	checkPath();
+//	checkPath();
 	var iosURL="https://fir.im/v425";
 	var androidURL="https://fir.im/fydb";
 
@@ -151,13 +151,17 @@ body {
 	function showOver() {
 		if (isWeiXin()) {
 			document.getElementById('popWindow').style.display = 'block';
+			console.log("isweixin")
 		} else {
 			if (isAndroid()) {
 				window.location.href = androidURL;
+				console.log("isAndroid")
 			} else if (isIOS()) {
 				window.location.href =iosURL;
+				console.log("isIOS")
 			} else {
 				window.location.href = androidURL;
+				console.log("isOther")
 			}
 		}
 	}
