@@ -101,6 +101,7 @@ body {
 	function goDownload() {
 	  	if (isWeiXin()) {// 是微信内部webView
 		  	document.getElementById("popWindow").style.display = "block";
+			document.getElementById("page1").style.display="none";
 	  	}else{
 	      	// 是安卓浏览器
 	      	if (isAndroid()) {
